@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,25 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-nk-2j3">
-                                <rect key="frame" x="187" y="254" width="46" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTO-MP-lf8">
+                                <rect key="frame" x="75" y="53" width="166" height="20.5"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDN-LH-uo4">
+                                <rect key="frame" x="129" y="139" width="63" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Convert"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="abc" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fu5-bH-opd">
-                                <rect key="frame" x="88" y="163" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-pJ-jkf">
+                                <rect key="frame" x="77" y="94" width="166" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Japan-Flag-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eqk-Ko-psc">
+                                <rect key="frame" x="51" y="192" width="71" height="63"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="naz-ih-mDN"/>
+                                    <constraint firstAttribute="width" constant="71" id="t69-dd-0VE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBA-ko-rhR">
+                                <rect key="frame" x="124" y="213" width="170" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LDN-LH-uo4" firstAttribute="top" secondItem="lfY-pJ-jkf" secondAttribute="bottom" constant="15" id="3p2-HY-QnL"/>
+                            <constraint firstItem="lfY-pJ-jkf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="6AM-OQ-pPz"/>
+                            <constraint firstItem="fTO-MP-lf8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="EKT-lm-8j7"/>
+                            <constraint firstItem="fTO-MP-lf8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="KHa-16-eyY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBA-ko-rhR" secondAttribute="trailing" constant="10" id="N71-w2-3w7"/>
+                            <constraint firstItem="dBA-ko-rhR" firstAttribute="top" secondItem="LDN-LH-uo4" secondAttribute="bottom" constant="44" id="NhG-qJ-H1N"/>
+                            <constraint firstItem="dBA-ko-rhR" firstAttribute="leading" secondItem="Eqk-Ko-psc" secondAttribute="trailing" constant="2" id="OaY-PT-c5h"/>
+                            <constraint firstItem="lfY-pJ-jkf" firstAttribute="top" secondItem="fTO-MP-lf8" secondAttribute="bottom" constant="20.5" id="Uol-yA-dIT"/>
+                            <constraint firstItem="Eqk-Ko-psc" firstAttribute="top" secondItem="LDN-LH-uo4" secondAttribute="bottom" constant="23" id="bgR-AW-l3c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LDN-LH-uo4" secondAttribute="trailing" constant="112" id="f78-hU-QQZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTO-MP-lf8" secondAttribute="trailing" constant="63" id="fnF-Qv-DV2"/>
+                            <constraint firstItem="Eqk-Ko-psc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="syI-Nn-bKD"/>
+                            <constraint firstItem="LDN-LH-uo4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="113" id="u2z-iD-Hen"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lfY-pJ-jkf" secondAttribute="trailing" constant="61" id="vM1-T2-nDk"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Japan-Flag-icon.png" width="256" height="256"/>
+    </resources>
 </document>

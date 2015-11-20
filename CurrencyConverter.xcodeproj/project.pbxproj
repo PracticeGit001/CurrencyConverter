@@ -15,6 +15,9 @@
 		DDC3576A1BFEFC1C0025ABBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC357681BFEFC1C0025ABBA /* LaunchScreen.storyboard */; };
 		DDC357751BFEFC1C0025ABBA /* CurrencyConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC357741BFEFC1C0025ABBA /* CurrencyConverterTests.m */; };
 		DDC357801BFEFC1C0025ABBA /* CurrencyConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC3577F1BFEFC1C0025ABBA /* CurrencyConverterUITests.m */; };
+		DDC357901BFF09530025ABBA /* china-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC3578D1BFF09530025ABBA /* china-icon.png */; };
+		DDC357911BFF09530025ABBA /* Japan-Flag-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC3578E1BFF09530025ABBA /* Japan-Flag-icon.png */; };
+		DDC357921BFF09530025ABBA /* usa.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC3578F1BFF09530025ABBA /* usa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		DDC3577B1BFEFC1C0025ABBA /* CurrencyConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC3577F1BFEFC1C0025ABBA /* CurrencyConverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyConverterUITests.m; sourceTree = "<group>"; };
 		DDC357811BFEFC1C0025ABBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDC3578D1BFF09530025ABBA /* china-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "china-icon.png"; sourceTree = "<group>"; };
+		DDC3578E1BFF09530025ABBA /* Japan-Flag-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Japan-Flag-icon.png"; sourceTree = "<group>"; };
+		DDC3578F1BFF09530025ABBA /* usa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usa.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 		DDC357591BFEFC1C0025ABBA /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				DDC3578D1BFF09530025ABBA /* china-icon.png */,
+				DDC3578E1BFF09530025ABBA /* Japan-Flag-icon.png */,
+				DDC3578F1BFF09530025ABBA /* usa.png */,
 				DDC3575D1BFEFC1C0025ABBA /* AppDelegate.h */,
 				DDC3575E1BFEFC1C0025ABBA /* AppDelegate.m */,
 				DDC357601BFEFC1C0025ABBA /* ViewController.h */,
@@ -248,6 +257,9 @@
 			files = (
 				DDC3576A1BFEFC1C0025ABBA /* LaunchScreen.storyboard in Resources */,
 				DDC357671BFEFC1C0025ABBA /* Assets.xcassets in Resources */,
+				DDC357911BFF09530025ABBA /* Japan-Flag-icon.png in Resources */,
+				DDC357921BFF09530025ABBA /* usa.png in Resources */,
+				DDC357901BFF09530025ABBA /* china-icon.png in Resources */,
 				DDC357651BFEFC1C0025ABBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
