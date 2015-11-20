@@ -14,6 +14,8 @@
 @interface ViewController ()<CRCurrencyRequestDelegate>
 
 @property (strong, nonatomic) CRCurrencyRequest *currencyRequest;
+@property (weak, nonatomic) IBOutlet UILabel *labelJP;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldNumber;
 
 @end
 
@@ -21,8 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	_currencyRequest.delegate = self;
-	[_currencyRequest start];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,11 +31,15 @@
 }
 
 -(IBAction)buttonConvertClicked:(id)sender{
-	_currencyRequest = [[CRCurrencyRequest alloc]init];
-	
+   
+    _currencyRequest =[[CRCurrencyRequest alloc]init];
+    _currencyRequest.delegate = self;
+    [_currencyRequest start];
 }
 -(void)currencyRequest:(CRCurrencyRequest *)req retrievedCurrencies:(CRCurrencyResults *)currencies{
-	
+   
+    _labelJP.text = [NSString stringWithFormat:@"%f ¥", _textFieldNumber.text.intValue * currencies.JPY];
+    NSLog(@"%@",currencies.description);
 }
 
 @end
