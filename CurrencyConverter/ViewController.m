@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "CurrencyRequest/CRCurrencyRequest.h" 
+#import "CurrencyRequest/CRCurrencyResults.h"
 
-@interface ViewController ()
+
+@interface ViewController ()<CRCurrencyRequestDelegate>
+
+@property (strong, nonatomic) CRCurrencyRequest *currencyRequest;
 
 @end
 
@@ -16,12 +21,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+	_currencyRequest.delegate = self;
+	[_currencyRequest start];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)buttonConvertClicked:(id)sender{
+	_currencyRequest = [[CRCurrencyRequest alloc]init];
+	
+}
+-(void)currencyRequest:(CRCurrencyRequest *)req retrievedCurrencies:(CRCurrencyResults *)currencies{
+	
 }
 
 @end
